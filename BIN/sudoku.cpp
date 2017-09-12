@@ -39,7 +39,7 @@ void dfs(int num, int p, int sum){
 		}
 	}
 }
-int main(){
+int main(int argc,char *argv[]){
 	freopen("sudoku.txt", "w", stdout);
 	scanf("%d", &n);
 	int p=0,q=0,k=0;
