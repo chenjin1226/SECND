@@ -39,9 +39,21 @@ void dfs(int num, int p, int sum){
 		}
 	}
 }
+int INputIsOK(char argv[], int len)
+{
+    int res = 0;
+    for (int pos = 0; pos < len; pos++) 
+    {
+        if (argv[pos]< '0' || argv[pos] > '9')return -1;
+        res = res * 10 + argv[pos] - '0';
+        if (res > 1000000)return -1;
+    }
+    return res;
+}
 int main(int argc,char *argv[]){
 	freopen("sudoku.txt", "w", stdout);
-	scanf("%d", &n);
+	//scanf("%d", &n);
+	n=INputIsOK(argv[2],strlen(argv[2])); 
 	int p=0,q=0,k=0;
 	int t1[3]={0,1,2};
 	int t2[3]={3,4,5};
